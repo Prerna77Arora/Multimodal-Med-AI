@@ -33,7 +33,7 @@ def process_inputs(audio_filepath, image_filepath):
         doctor_response = analyze_image_with_query(
             query=combined_query,
             encoded_image=encode_image(image_filepath),
-            model="llama-3.2-11b-vision-preview"
+            model="meta-llama/llama-4-scout-17b-16e-instruct"
         )
     else:
         doctor_response = "No image provided for me to analyze"
@@ -59,4 +59,7 @@ iface = gr.Interface(
     title="AI Doctor with Vision and Voice"
 )
 
-iface.launch(server_name="0.0.0.0", server_port=7860, debug=True)
+iface.launch(
+    server_name="0.0.0.0",
+    server_port=int(os.environ.get("PORT", 7860))
+)
