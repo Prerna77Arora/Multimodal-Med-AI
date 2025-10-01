@@ -1,4 +1,6 @@
-
+# if you dont use pipenv uncomment the following:
+# from dotenv import load_dotenv
+# load_dotenv()
 
 #Step1: Setup GROQ API key
 import os
@@ -19,7 +21,10 @@ def encode_image(image_path):
 from groq import Groq
 
 query="Please analyze this photo and tell me if there are any visible signs of acne, skin irritation, or blemishes on my face. Be specific."
-model="llama-3.2-90b-vision-preview"
+#model = "meta-llama/llama-4-maverick-17b-128e-instruct"
+model="meta-llama/llama-4-scout-17b-16e-instruct"
+#model = "meta-llama/llama-4-scout-17b-16e-instruct"
+#model="llama-3.2-90b-vision-preview" #Deprecated
 
 def analyze_image_with_query(query, model, encoded_image):
     client=Groq()  
@@ -45,4 +50,3 @@ def analyze_image_with_query(query, model, encoded_image):
     )
 
     return chat_completion.choices[0].message.content
-
