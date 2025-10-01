@@ -13,7 +13,7 @@ def text_to_speech_with_gtts_old(input_text, out_filepath):
       audioobj.save(out_filepath)
 
 
-input_text="AI WITH PRERNA ARORA"     
+input_text="Hey I am your vitual doctor doctor. How can I help you today?"     
 #text_to_speech_with_gtts_old(input_text=input_text , out_filepath="gtts_test.mp3")
 
 # use model for text output to voice
@@ -53,7 +53,7 @@ def text_to_speech_with_gtts(input_text, out_filepath_mp3, out_filepath_wav):
     except Exception as e:
         print(f"An error occurred while trying to play the audio: {e}")
 
-input_text ="Hi! This is ai with prerna arora"
+input_text ="Hi! I am your virtual doctor. How can I help you today?"
 text_to_speech_with_gtts(
     input_text=input_text,
     out_filepath_mp3="gtts_test.mp3",
