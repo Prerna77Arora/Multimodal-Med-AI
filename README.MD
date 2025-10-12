@@ -1,6 +1,6 @@
 # 🩺 Multimodal-Med-AI –>> Your AI Doctor Assistant
 
-MediBot 2.0 is an AI-powered doctor assistant that leverages speech recognition, text-to-speech, and multimodal large language models to analyze patient images and voice inputs. The system provides a simulated doctor's response both as text and synthesized speech.
+MediBot 2.0 is an AI-powered health care assistant that leverages speech recognition, text-to-speech, and multimodal large language models to analyze patient images and voice inputs. The system provides a simulated doctor's response both as text and synthesized speech.
 
 ## 🚀 Key Features
 
@@ -170,4 +170,5 @@ docker rm ai-medi-app-container
 This project is intended for educational use only. It does not provide real medical advice or diagnosis. Please consult a licensed healthcare provider for actual medical concerns.
 
 ---
+
 
